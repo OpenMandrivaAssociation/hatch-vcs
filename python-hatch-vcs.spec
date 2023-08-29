@@ -1,14 +1,18 @@
+Summary:	Hatch plugin for versioning with your preferred VCS
 Name:		python-hatch-vcs
 Version:	0.3.0
-Release:	2
-Source0:	https://files.pythonhosted.org/packages/source/h/hatch_vcs/hatch_vcs-%{version}.tar.gz
-Summary:	Hatch plugin for versioning with your preferred VCS
-URL:		https://pypi.org/project/hatch-vcs/
+Release:	3
 License:	GPL
 Group:		Development/Python
+URL:		https://pypi.org/project/hatch-vcs/
+Source0:	https://files.pythonhosted.org/packages/source/h/hatch_vcs/hatch_vcs-%{version}.tar.gz
+# https://github.com/ofek/hatch-vcs/issues/8
+Patch0:		https://github.com/ofek/hatch-vcs/commit/47364faf5563df0eaa631ed10383817762c6b547.patch
 BuildRequires:	python-pip
 BuildRequires:	python3dist(hatchling)
 BuildArch:	noarch
+Requires:	python%{pyver}dist(setuptools-scm)
+Requires:	python%{pyver}dist(hatchling)
 
 %description
 Hatch plugin for versioning with your preferred VCS
