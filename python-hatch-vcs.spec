@@ -6,6 +6,7 @@ License:	MIT
 Group:		Development/Python
 URL:		https://pypi.org/project/hatch-vcs/
 Source0:	https://pypi.org/packages/source/h/hatch-vcs/hatch_vcs-%{version}.tar.gz
+BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
 BuildArch:	noarch
 
